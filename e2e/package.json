@@ -1,0 +1,24 @@
+{
+  "name": "gbp-overlay-e2e",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Satya Janghu <satya@getsatya.com> (https://getsatya.com)",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test 00-health-check",
+    "test:full": "playwright test 02-full-flow",
+    "test:setup": "playwright test 01-setup-form",
+    "test:dashboard": "playwright test 03-projects-dashboard",
+    "test:download": "playwright test 04-download-regression",
+    "report": "playwright show-report reports/html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.0.0",
+    "adm-zip": "^0.5.16",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@types/adm-zip": "^0.5.7"
+  }
+}
